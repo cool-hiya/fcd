@@ -1,0 +1,10 @@
+@import "assets/styles/fonts.scss";
+
+p {
+    font-family: "Montserrat";
+    display: flex;
+
+    &.hello {
+        color: red;
+    }
+}
