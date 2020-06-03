@@ -1,0 +1,12 @@
+body {
+    background: url("./assets/images/static/bg.jpg");
+}
+
+p {
+    font-family: "Montserrat";
+    display: flex;
+
+    &.hello {
+        color: red;
+    }
+}

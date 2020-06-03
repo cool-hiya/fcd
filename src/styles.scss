@@ -1,12 +1,4 @@
-@import "assets/styles/fonts.scss";
-@import "assets/styles/components.scss";
+@import "./assets/styles/fonts.scss";
+@import "./assets/styles/main.scss";
+@import "./assets/styles/components.scss";
 
-
-p {
-    font-family: "Montserrat";
-    display: flex;
-
-    &.hello {
-        color: red;
-    }
-}

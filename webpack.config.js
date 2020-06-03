@@ -20,6 +20,33 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|jpe?g|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'images'
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 85,
+                            },
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                quality: 90,
+                                speed: 4,
+                            }
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: {
@@ -34,7 +61,7 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: [
-                    "raw-loader",
+                    "html-loader",
                     "pug-html-loader"
                 ]
             },
@@ -65,7 +92,9 @@ module.exports = {
             {
                 test: /\.(woff|woff2)$/,
                 loader: 'file-loader',
-                options: {outputPath: 'fonts'}
+                options: {
+                    outputPath: 'fonts'
+                }
             }
         ]
     },
@@ -78,7 +107,6 @@ module.exports = {
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),
-        new HtmlWebpackPugPlugin(),
         new webpack.DefinePlugin({
             NODE_ENV: process.env.NODE_ENV
         })
