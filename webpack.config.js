@@ -8,7 +8,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: {
-        main: './src/index.js',
+        main: ['@babel/polyfill', './src/index.js'],
     },
     output: {
         filename: '[name].[hash].js',
@@ -19,6 +19,18 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ]
+                    }
+                }
+            },
             {
                 test: /\.pug$/,
                 use: [
