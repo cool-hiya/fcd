@@ -6,8 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "server": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
-    "start": "npm run dev && npm run server"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
   },
   "author": "Arina",
   "license": "ISC",
