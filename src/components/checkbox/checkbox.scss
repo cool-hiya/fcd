@@ -22,7 +22,7 @@
         margin-right: 10px;
     }
     &__input {
-        @include visually-hidden
+        @include visually-hidden;
 
         &:checked {
             ~ #{$c} {
