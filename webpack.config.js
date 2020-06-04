@@ -7,8 +7,9 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
+    context: path.resolve(__dirname, 'src'),
     entry: {
-        main: ['@babel/polyfill', './src/index.js'],
+        main: ['@babel/polyfill', './index.js'],
     },
     output: {
         filename: '[name].[hash].js',
@@ -19,26 +20,33 @@ module.exports = {
         writeToDisk: true,
         open: true
     },
+    resolve: {
+        extensions: ['.js'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components')
+        }
+    },
     module: {
         rules: [
             {
                 test: /\.svg$/,
-                include: path.resolve(__dirname, 'src/assets/images/icons'),
+                include: /icons/,
                 loader: 'svg-sprite-loader',
                 options: {
                     extract: true,
-                    spriteFilename: 'images/icons.svg',
+                    spriteFilename: 'icons.svg',
+                    outputPath: './images/',
                     runtimeCompat: true
                 }
             },
             {
                 test: /\.(png|jpe?g|svg)$/i,
-                exclude: path.resolve(__dirname, 'src/assets/images/icons'),
+                exclude: /icons/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'images'
+                            outputPath: './images'
                         }
                     },
                     {
@@ -106,7 +114,7 @@ module.exports = {
                 test: /\.(woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'fonts'
+                    outputPath: './fonts'
                 }
             }
         ]
@@ -116,7 +124,7 @@ module.exports = {
             filename: 'css/styles.[hash].css',
         }),
         new HtmlWebpackPlugin({
-            template: './src/index.pug',
+            template: './index.pug',
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),

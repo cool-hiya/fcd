@@ -1,2 +1,2 @@
 import './styles.scss';
-import IconStorage from './components/icon-storage/icon-storage';
+import IconStorage from '@components/icon-storage/icon-storage';
