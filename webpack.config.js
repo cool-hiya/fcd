@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer');
 
@@ -21,7 +22,18 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.svg$/,
+                include: path.resolve(__dirname, 'src/assets/images/icons'),
+                loader: 'svg-sprite-loader',
+                options: {
+                    extract: true,
+                    spriteFilename: 'images/icons.svg',
+                    runtimeCompat: true
+                }
+            },
+            {
                 test: /\.(png|jpe?g|svg)$/i,
+                exclude: path.resolve(__dirname, 'src/assets/images/icons'),
                 use: [
                     {
                         loader: 'file-loader',
@@ -108,6 +120,9 @@ module.exports = {
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),
+        new SpriteLoaderPlugin({
+            plainSprite: true
+        }),
         new webpack.DefinePlugin({
             NODE_ENV: process.env.NODE_ENV
         })

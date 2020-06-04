@@ -1,6 +1,2 @@
 import './styles.scss';
-import './components/date-picker/date-picker.js';
-
-
-console.log('hi');
-
+import IconStorage from './components/icon-storage/icon-storage';
