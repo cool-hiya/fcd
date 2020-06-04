@@ -127,6 +127,10 @@ module.exports = {
             template: './index.pug',
             filename: 'index.html',
         }),
+        new HtmlWebpackPlugin({
+            template: './pages/ui-kit/ui-kit.pug',
+            filename: 'ui-kit.html',
+        }),
         new CleanWebpackPlugin(),
         new SpriteLoaderPlugin({
             plainSprite: true
