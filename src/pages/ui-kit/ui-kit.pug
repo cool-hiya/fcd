@@ -28,7 +28,7 @@ ul.ui-colors
 
 ul.ui-texts
     each text, i in texts
-        - var className = text.mod && i!==text.length-1 ? "text _" + text.mod : "";
+        - var className = text.mod && i!==text.length-1 ? "title _" + text.mod : "";
         li.ui-text
             p #{text.label}
             p(class=className) #{text.value}
