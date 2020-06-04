@@ -6,7 +6,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
+    "server": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+    "start": "npm run dev && npm run server"
   },
   "author": "Arina",
   "license": "ISC",
@@ -22,7 +23,6 @@
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
-    "html-webpack-pug-plugin": "^2.0.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
