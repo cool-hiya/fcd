@@ -1,3 +1,5 @@
+include components/icon/icon.pug
+
 doctype html
 head
   meta(charset='UTF-8')
@@ -5,8 +7,6 @@ head
   title Document
 body
   p.hello Blablabla
-  img(src="assets/images/static/bg.jpg")
-  svg
-    use(xlink:href="#logo")
+  +icon('logo')
   include components/header/header.pug
   include components/icon-storage/icon-storage.pug
