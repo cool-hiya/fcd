@@ -19,6 +19,8 @@ block content
             {'label': 'body', 'mod': '', 'value': 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'},
         ]
 
+    +checkbox('тест тест тест тест', 'test', true)
+    
     ul.ui-colors
         each color in colors
             li.ui-color
@@ -35,3 +37,4 @@ block content
             li.ui-text
                 p #{text.label}
                 p(class=className) #{text.value}
+
