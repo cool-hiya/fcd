@@ -1,0 +1,26 @@
+body {
+    font-family: "Montserrat", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: $c-base-75;
+}
+
+.text {
+    color: $c-base;
+    font-weight: 700;
+
+    &._h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    &._h2 {
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    &._h3 {
+        line-height: 15px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}

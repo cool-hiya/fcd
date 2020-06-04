@@ -1,0 +1,26 @@
+$colors: (
+    base: $c-base,
+    base-75: $c-base-75,
+    base-50: $c-base-50,
+    base-25: $c-base-25,
+    base-5: $c-base-5,
+    primary: $c-primary,
+    accent: $c-accent,
+);
+
+.ui-color {
+    display: flex;
+
+    &__view {
+        border-radius: 6px;
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+
+        @each $label, $color in $colors {
+            &._#{$label} {
+                background-color: $color;
+            }
+        }
+    }
+}
