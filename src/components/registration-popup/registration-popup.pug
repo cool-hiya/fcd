@@ -8,10 +8,11 @@ block header
     p.title._h1 Регистрация аккаунта
 
 block content
-    .signin-popup
+    .registration-popup(data-registration-popup='')
         form
             +input({type: 'text', placeholder: 'Имя'})
             +input({type: 'text', placeholder: 'Фамилия'})
+            +input({type: 'text', placeholder: 'ДД.ММ.ГГГГ', 'data-birthday': ''})
             +input({type: 'email', placeholder: 'Email'})
             +input({type: 'password', placeholder: 'Пароль'})
             +arrow-button({text: 'Перейти к оплате'})
