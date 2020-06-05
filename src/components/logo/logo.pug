@@ -1,3 +1,5 @@
+include ../image/image.pug
+
 mixin logo({className=''})
     a.logo(class=className href='/')
         +image({path: 'logo/logo.svg', className:'logo__image'})
