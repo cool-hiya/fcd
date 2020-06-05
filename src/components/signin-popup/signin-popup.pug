@@ -8,9 +8,9 @@ block header
     p.title._h1 Войти
 
 block content
-    .popup-signin
+    .signin-popup
         form
-            +input({class:'popup-signin__field', type: 'email', placeholder: 'Email'})
-            +input({class:'popup-signin__field', type: 'password', placeholder: 'Пароль'})
+            +input({class:'signin-popup__field', type: 'email', placeholder: 'Email'})
+            +input({class:'signin-popup__field', type: 'password', placeholder: 'Пароль'})
             +arrow-button({text: 'Войти'})
         +toxin-check({action: 'Создать', href: '#'})
