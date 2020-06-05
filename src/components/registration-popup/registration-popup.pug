@@ -1,0 +1,18 @@
+extends ../popup/popup.pug 
+
+include ../input/input.pug
+include ../arrow-button/arrow-button.pug
+include ../toxin-check/toxin-check.pug
+
+block header
+    p.title._h1 Регистрация аккаунта
+
+block content
+    .signin-popup
+        form
+            +input({type: 'text', placeholder: 'Имя'})
+            +input({type: 'text', placeholder: 'Фамилия'})
+            +input({type: 'email', placeholder: 'Email'})
+            +input({type: 'password', placeholder: 'Пароль'})
+            +arrow-button({text: 'Перейти к оплате'})
+        +toxin-check({action: 'Войти', href: '#'})
