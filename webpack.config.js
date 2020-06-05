@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const GhPagesWebpackPlugin = require('gh-pages-webpack-plugin');
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer');
 
@@ -143,6 +144,9 @@ module.exports = {
         new CleanWebpackPlugin(),
         new SpriteLoaderPlugin({
             plainSprite: true
+        }),
+        new GhPagesWebpackPlugin({
+            path: path.resolve(__dirname, 'dist')
         }),
         new webpack.DefinePlugin({
             NODE_ENV: process.env.NODE_ENV
