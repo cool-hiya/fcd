@@ -1,7 +1,12 @@
 extends ../popup/popup.pug 
 
+include ../input/input.pug
+
 block header
     p.title._h1 Войти
 
 block content
-    .popup-signin blablabla
+    .popup-signin
+        form
+            +input({class:'popup-signin__field', type: 'email', placeholder: 'Email'})
+            +input({class:'popup-signin__field', type: 'password', placeholder: 'Пароль'})
