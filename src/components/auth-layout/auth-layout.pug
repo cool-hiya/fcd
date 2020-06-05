@@ -1,0 +1,12 @@
+extends ../layout/layout.pug
+
+include ../header/header.pug
+include ../footer/footer.pug
+
+block header
+    +header()
+block content
+    main.auth-layout
+        block popup
+block footer
+    +footer()
