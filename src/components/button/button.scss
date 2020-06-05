@@ -1,0 +1,22 @@
+.button {
+    @include reset-button;
+    height: 44px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 22px;
+    padding: 0 20px;
+    line-height: 1;
+
+    &._primary {
+        background: $primary-gradient;
+        color: $c-default;
+    }
+
+    &._wide {
+        width: 100%;
+    }
+}

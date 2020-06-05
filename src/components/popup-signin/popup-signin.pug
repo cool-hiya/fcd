@@ -1,6 +1,7 @@
 extends ../popup/popup.pug 
 
 include ../input/input.pug
+include ../arrow-button/arrow-button.pug
 
 block header
     p.title._h1 Войти
@@ -10,3 +11,4 @@ block content
         form
             +input({class:'popup-signin__field', type: 'email', placeholder: 'Email'})
             +input({class:'popup-signin__field', type: 'password', placeholder: 'Пароль'})
+            +arrow-button({text: 'Войти'})
