@@ -3,7 +3,7 @@ include ../menu/menu.pug
 
 mixin header()
     header.header
-        +logo()
+        +logo({className: 'header__logo'})
         +menu({menuLinks: menuLinks})
         +button({text:'Login'})
         +button({text:'Register'})

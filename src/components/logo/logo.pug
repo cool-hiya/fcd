@@ -1,3 +1,3 @@
-mixin logo()
-    a.logo(href='/')
+mixin logo({className=''})
+    a.logo(class=className href='/')
         +image({path: 'logo/logo.svg', className:'logo__image'})

@@ -1,0 +1,13 @@
+.dropdown {
+    position: relative;
+
+    &__trigger {
+        @include reset-button;
+    }
+
+    &__menu {
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+}

@@ -4,6 +4,6 @@ mixin menu({menuLinks})
             each link in menuLinks
                 li 
                     if link.children
-                        button #{link.name}
+                        +dropdown({trigger: link.name, menuLinks: link.children})
                     else
                         +link({href: link.href, text: link.name})
