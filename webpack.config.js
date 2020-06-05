@@ -23,7 +23,8 @@ module.exports = {
     resolve: {
         extensions: ['.js'],
         alias: {
-            '@components': path.resolve(__dirname, 'src/components')
+            '@components': path.resolve(__dirname, 'src/components'),
+            '@helpers': path.resolve(__dirname, 'src/assets/utils/helpers.js')
         }
     },
     module: {

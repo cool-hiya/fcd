@@ -1,9 +1,11 @@
+include ../menu-dropdown/menu-dropdown.pug
+
 mixin menu({menuLinks})
     nav.menu
         ul.menu__list 
             each link in menuLinks
                 li 
                     if link.children
-                        +dropdown({trigger: link.name, menuLinks: link.children})
+                        +menu-dropdown({trigger: link.name, menuLinks: link.children, attr: {'data-menu-dropdown': ''}})
                     else
                         +link({href: link.href, text: link.name})

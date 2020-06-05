@@ -1,6 +1,0 @@
-mixin dropdown({trigger, menuLinks, className})
-    div.dropdown(class=className data-dropdown)
-        button.dropdown__trigger(data-dropdown-trigger) #{trigger}
-        div.dropdown__menu(data-dropdown-menu hidden)
-            each link in menuLinks
-                a(href=link.href) #{link.name}

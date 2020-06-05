@@ -1,0 +1,6 @@
+mixin menu-dropdown({trigger, menuLinks, className, attr= {}})
+    div.menu-dropdown(class=className data-dropdown='')&attributes(attr)
+        button(data-dropdown-trigger='') #{trigger} blabla
+        div(data-dropdown-menu='')
+            each link in menuLinks
+                a(href=link.href) #{link.name}

@@ -1,13 +1,19 @@
 .dropdown {
     position: relative;
+    $c: &;
 
-    &__trigger {
-        @include reset-button;
+    &._open {
+        #{$c} {
+            &__menu {
+                display: block;
+            }
+        }
     }
 
     &__menu {
         position: absolute;
         right: 0;
         top: 100%;
+        display: none;
     }
 }
