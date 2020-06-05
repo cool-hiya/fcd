@@ -2,6 +2,7 @@ include ../copyright/copyright.pug
 include ../socials/socials.pug
 include ../logo/logo.pug
 include ../link/link.pug
+include ../subscription-form/subscription-form.pug
 
 mixin footer()
     footer.footer
@@ -12,5 +13,6 @@ mixin footer()
                 p #{group.groupName}
                 each link in group.links
                     +link({text: link.name, href: link.href})
+        +subscription-form()
         +copyright()
         +socials(socials)
