@@ -27,5 +27,4 @@
 
 @mixin container {
     padding: 0 calc(50% - #{$bp-lg / 2});
-    height: 100%;
 }
