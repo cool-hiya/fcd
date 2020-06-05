@@ -1,10 +1,10 @@
-.header {
+.header {    
+    @include container;
     display: flex;
     align-items: center;
     height: 70px;
     box-shadow: 0px 10px 20px $c-base-5;
     background-color: $c-default;
-    @include container;
 
     &__logo {
         margin-right: auto;

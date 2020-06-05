@@ -1,3 +1,4 @@
 .sign-in {
-   
+    @include container;
+    background: url("./assets/images/static/bg-signin.jpg") no-repeat center bottom / cover;
 }
