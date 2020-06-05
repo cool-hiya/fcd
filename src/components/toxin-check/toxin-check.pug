@@ -1,0 +1,6 @@
+include ../button/button.pug
+
+mixin toxin-check({action='', href='#'})
+    .toxin-check
+        p Нет аккаунта на Toxin?
+        +button({text: action, href: href})

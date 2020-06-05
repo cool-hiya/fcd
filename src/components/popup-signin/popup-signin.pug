@@ -2,6 +2,7 @@ extends ../popup/popup.pug
 
 include ../input/input.pug
 include ../arrow-button/arrow-button.pug
+include ../toxin-check/toxin-check.pug
 
 block header
     p.title._h1 Войти
@@ -12,3 +13,4 @@ block content
             +input({class:'popup-signin__field', type: 'email', placeholder: 'Email'})
             +input({class:'popup-signin__field', type: 'password', placeholder: 'Пароль'})
             +arrow-button({text: 'Войти'})
+        +toxin-check({action: 'Создать', href: '#'})
