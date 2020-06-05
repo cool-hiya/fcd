@@ -1,1 +1,9 @@
-p hello
+include ../logo/logo.pug
+include ../menu/menu.pug
+
+mixin header()
+    header.header
+        +logo()
+        +menu({menuLinks: menuLinks})
+        +button({text:'Login'})
+        +button({text:'Register'})

@@ -1,0 +1,5 @@
+mixin button({text, href, attr, className, mod, type='button'})
+    if href
+        a.button(href=href) #{text}
+    else
+        button.button(type=type) #{text}

@@ -131,6 +131,10 @@ module.exports = {
             template: './pages/ui-kit/ui-kit.pug',
             filename: 'ui-kit.html',
         }),
+        new HtmlWebpackPlugin({
+            template: './pages/sign-in/sign-in.pug',
+            filename: 'sign-in.html',
+        }),
         new CleanWebpackPlugin(),
         new SpriteLoaderPlugin({
             plainSprite: true

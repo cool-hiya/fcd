@@ -16,3 +16,13 @@
     outline: 0;
     cursor: pointer;
 }
+
+@mixin reset-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+@mixin container{
+    padding: 0 calc(50% - #{$bp-lg / 2});
+}

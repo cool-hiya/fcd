@@ -1,0 +1,9 @@
+mixin menu({menuLinks})
+    nav.menu
+        ul.menu__list 
+            each link in menuLinks
+                li 
+                    if link.children
+                        button #{link.name}
+                    else
+                        +link({href: link.href, text: link.name})
