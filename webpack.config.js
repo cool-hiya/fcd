@@ -136,6 +136,10 @@ module.exports = {
             template: './pages/sign-in/sign-in.pug',
             filename: 'sign-in.html',
         }),
+        new HtmlWebpackPlugin({
+            template: './pages/registration/registration.pug',
+            filename: 'registration.html',
+        }),
         new CleanWebpackPlugin(),
         new SpriteLoaderPlugin({
             plainSprite: true
