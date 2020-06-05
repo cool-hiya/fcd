@@ -1,7 +1,16 @@
 include ../copyright/copyright.pug
 include ../socials/socials.pug
+include ../logo/logo.pug
+include ../link/link.pug
 
 mixin footer()
     footer.footer
+        +logo()
+        p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        div
+            each group in footerLinks
+                p #{group.groupName}
+                each link in group.links
+                    +link({text: link.name, href: link.href})
         +copyright()
         +socials(socials)
